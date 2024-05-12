@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  margin: 0 20px;
+}
+.empTable{
+  width: 100%;
+  text-align: left;
+}
+.empTable td{
+border-bottom: 1px solid gray;
+}
+.empHeading{
+  background-color: #009879;
+  color: white;
+
+}
+.empTable td{ 
+  padding: 10px 10px;
+ 
+}
+.empHeading th{
+  border: 0;
+  padding: 10px 10px;
+  border: 1px solid #009879;
+}
+
+.buttonDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ margin: 20px 0;
+}
+.buttonDiv button{
+background-color: #009879;
+color: white;
+padding: 10px;
+border-radius: 5px;
+}
+.buttonDiv p{
+  background-color: #009879;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+  }
