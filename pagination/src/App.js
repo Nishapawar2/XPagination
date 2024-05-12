@@ -17,7 +17,7 @@ function App() {
         "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
       )
       .then((res) => setEmployees(res.data))
-      .catch((error) => console.log("error fetching data", error));
+      .catch(() => alert('failed to fetch data'))
   }, []);
 
   function prevPage(){
@@ -34,16 +34,18 @@ function App() {
 
 
   return (
-    <div className="App">
-      
+    <div className="App">      
         <h1>Employee Data Table</h1>
         <table className="empTable">
-          <thead className="empHeading">
+          <thead>
+          <tr className="empHeading">
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
+          </tr>
           </thead>
+          <tbody>
           {records.map((emp) => {
             return (
               <tr key={emp.id}>
@@ -54,6 +56,7 @@ function App() {
               </tr>
             );
           })}
+          </tbody>
         </table>
         <div className="buttonDiv">
           <button onClick={prevPage}>Previous</button>
